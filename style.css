@@ -1,0 +1,19 @@
+p {
+    color: green;
+}
+
+p#ze-zdjeciem {
+    color: blue;
+}
+
+.lista-lista {
+    color: pink;
+}
+
+/* ul, ol {
+    color: red;
+}
+
+ul.lista-lista, ol.lista-lista {
+    color: red;
+} */
