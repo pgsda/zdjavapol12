@@ -23,3 +23,15 @@ header nav a {
     margin-right: 5px;
     text-align: center;
 }
+
+main section, main aside {
+    float: left;
+}
+
+main section {
+    width: 70%;
+}
+
+main aside {
+    width: 30%;
+}
