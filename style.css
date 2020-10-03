@@ -1,31 +1,36 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;  /* zmiana fontu */
+    margin: 0; /* body ma domyślny margines w większości przeglądarek. Żeby
+                    się go pozbyć i "przytulić" elementy do krawędzi
+                    ustawiamy margines na 0 */
+}
+
+header {                        /* dotyczy sekcji header w html */
+    background-color: plum;     /* kolor tła naszego nagłówka */
+    padding: 20px;              /* wewnętrzny margines = 20px */
+    margin-bottom: 20px;        /* dolny zewnętrzny margines = 20px */
+}
+
+header h1, header h2 {  /* dotyczy nagłówków h1 i h2 ale tylko takich, które znajdują się
+                            w sekcji header */
     margin: 0;
 }
 
-header {
-    background-color: plum;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-header h1, header h2 {
-    margin: 0;
-}
-
-header nav a {
-    display: block;
+header nav a {  /* dotyczy elementów a, które znajdują się w nav, ktore znajdują się w header */
+    display: block;     /* zachowanie jak kontenerów */
     background-color: rebeccapurple;
     color: white;
-    width: 150px;
-    float: left;
+    width: 150px;       /* szerokość 150px; */
+    float: left;        /* "przestań się rozpychać" i "przyklejaj się do lewej" */
     padding: 5px;
     margin-right: 5px;
-    text-align: center;
+    text-align: center; /* tekst w elemencie wyśrodkowany */
 }
 
-main section, main aside {
+main section, main aside {  /* dot. sekcji section i aside, ale tylko tych znajdujących sie w main */
     float: left;
+    padding: 20px;
+    box-sizing: border-box; /* wliczj padding do szerokości elementu */
 }
 
 main section {
@@ -34,4 +39,13 @@ main section {
 
 main aside {
     width: 30%;
+}
+
+footer {
+    position: fixed;        /* "przyklej" się do okna przeglądarki */
+    bottom: 0px;            /* "przyklej" się do dołu (w odl. 0px) */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: plum;
+    width: 100%;
 }
