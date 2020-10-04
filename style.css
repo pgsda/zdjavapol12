@@ -19,13 +19,6 @@ header h1, header h2 {  /* dotyczy nagłówków h1 i h2 ale tylko takich, które
     margin: 0;
 }
 
-{
-    width: 500px;
-    position: sticky;
-    top: 100px;
-    margin-left: calc(50% - 235px);
-}
-
 header nav a {  /* dotyczy elementów a, które znajdują się w nav, ktore znajdują się w header */
     display: block;     /* zachowanie jak kontenerów */
     background-color: rebeccapurple;
@@ -35,6 +28,11 @@ header nav a {  /* dotyczy elementów a, które znajdują się w nav, ktore znaj
     padding: 5px;
     margin-right: 5px;
     text-align: center; /* tekst w elemencie wyśrodkowany */
+}
+
+header nav a:hover {
+    color: black;
+    background-color: blanchedalmond;
 }
 
 main section, main aside {  /* dot. sekcji section i aside, ale tylko tych znajdujących sie w main */
@@ -51,6 +49,10 @@ main section {
 main aside {
     width: 30%;
     background-color: slategrey;
+}
+
+main p::first-line {
+    color: red;
 }
 
 footer {
