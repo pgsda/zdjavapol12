@@ -3,12 +3,17 @@ function downloadProducts() {
 
     xhttp.onload = function() {
         var section = document.querySelector("main section");
-        section.innerHTML = "";
         var productsList = JSON.parse(this.responseText);
 
+        var productsTable = "<table>";
+
         for(var i = 0; i < productsList.length; i++) {
-            section.innerHTML += productsList[i].name;
+            // section.innerHTML += productsList[i].name;
+            productsTable += `<tr><td>${productsList[i].name}</td><td>${productsList[i].price}</td></tr>`;
         }
+
+        productsTable += "</table>";
+        section.innerHTML = productsTable;
     }
 
     xhttp.open("GET", "produkty.json", true);
